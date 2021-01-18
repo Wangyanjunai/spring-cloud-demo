@@ -23,8 +23,8 @@ public class SpringUserApplication {
 		SpringApplication.run(SpringUserApplication.class, args);
 	}
 
-
 	@Bean
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public ServletRegistrationBean getServlet() {
 		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
 		ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
